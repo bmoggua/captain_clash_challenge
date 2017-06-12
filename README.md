@@ -17,6 +17,10 @@ git clone git@github.com:bmoggua/captain_clash_challenge.git
 ```
 bundle install
 ```
+- Charger les données dans l'application
+```
+rails db:setup
+```
 - Démarrer le serveur web
 ```
 rails s
