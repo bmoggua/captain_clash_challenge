@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title
+      | CaptainClashChallenge
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    .site-wrapper
+      .site-wrapper-inner
+        .cover-container
+          .masthead.clearfix
+            .inner
+              h3.masthead-brand
+                | Captain Clash Challenge
+          .inner.cover
+            = yield
+          .mastfoot
+            .inner
