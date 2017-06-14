@@ -6,9 +6,16 @@ p.lead
 hr
 
 h2 Liste des héros
-.row
+.row.character-list
+
   - @characters.in_groups(4, false).each do |characters_quarter|
     .col-xs-3
-      ul
+    
       - characters_quarter.each do |character|
-        li.text-left = "#{character.name} (#{character.life}/#{character.attack})"
+        .row.character-element
+        
+          - unless character.img_src.blank?
+            = image_tag character.img_src, class: 'pull-left'
+          
+          .character-name = "#{character.name} (#{character.life}/#{character.attack})"
+          
