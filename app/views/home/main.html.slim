@@ -2,3 +2,13 @@ h1.hover-heading
   | Bienvenue dans l'arène de combat.
 p.lead
   | Sélectionnez deux héros et laissez place au combat!
+
+hr
+
+h2 Liste des héros
+.row
+  - @characters.in_groups(4, false).each do |characters_quarter|
+    .col-xs-3
+      ul
+      - characters_quarter.each do |character|
+        li.text-left = "#{character.name} (#{character.life}/#{character.attack})"
