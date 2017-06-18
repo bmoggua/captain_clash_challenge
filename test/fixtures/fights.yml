@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  character_1: one
+  character_2: one
+  winner: one
+  looser: one
+
+two:
+  character_1: two
+  character_2: two
+  winner: two
+  looser: two

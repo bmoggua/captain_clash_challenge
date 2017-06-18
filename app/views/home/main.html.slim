@@ -5,6 +5,14 @@ p.lead
 
 hr
 
+- if @last_fight
+  h3 Détails du dernier combat :
+  h5 = "Combattant 1: #{@last_fight.character_1.name_characteristics}"
+  h5 = "Combattant 2: #{@last_fight.character_2.name_characteristics}"
+  h4 = "Vainqueur: >>>>>> #{@last_fight.winner.name.upcase} <<<<<<"
+
+hr
+
 h2 Liste des héros
 .row.character-list
 

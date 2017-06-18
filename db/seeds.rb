@@ -34,3 +34,8 @@ Character.create([
   { name: 'Yoshi',            life: 7,  attack: 4,  img_src: 'https://www.ssbwiki.com/images/thumb/2/29/Yoshi_SSB4.png/250px-Yoshi_SSB4.png' },
   { name: 'Zelda',            life: 10, attack: 7,  img_src: 'https://www.ssbwiki.com/images/thumb/f/fd/Zelda_SSB4.png/250px-Zelda_SSB4.png' },
   ])
+
+Fight.create(
+  character_1: Character.all.sample,
+  character_2: Character.all.sample,
+)
