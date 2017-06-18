@@ -8,4 +8,8 @@ class Character < ApplicationRecord
   def <=>(character)
     (life + attack) <=> (character.life + character.attack)
   end
+
+  def name_characteristics
+    "#{name} #{life}♥-#{attack}"
+  end
 end

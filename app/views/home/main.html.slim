@@ -5,6 +5,13 @@ p.lead
 
 hr
 
+= form_for @fight, html: { class: 'form-inline' } do |f|
+  .form-group
+    = f.collection_select :character_1_id, @characters, :id, :name_characteristics, {}, class: 'form-control'
+  = f.submit 'VS', class: 'btn btn-default', style: "margin-left: 40px; margin-right: 40px;"
+  .form-group
+    = f.collection_select :character_2_id, @characters, :id, :name_characteristics, {}, class: 'form-control'
+  
 - if @last_fight
   h3 Détails du dernier combat :
   h5 = "Combattant 1: #{@last_fight.character_1.name_characteristics}"
@@ -25,5 +32,5 @@ h2 Liste des héros
           - unless character.img_src.blank?
             = image_tag character.img_src, class: 'pull-left'
           
-          .character-name = "#{character.name} (#{character.life}/#{character.attack})"
+          .character-name = character.name_characteristics
           
